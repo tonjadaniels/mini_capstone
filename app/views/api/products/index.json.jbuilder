@@ -1,3 +1,1 @@
-index.json.jbuilder
-
-json.array! @product
+json.array! @products, partial: 'product', as: :product

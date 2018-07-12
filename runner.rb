@@ -11,16 +11,16 @@ require 'unirest'
 
 # puts JSON.pretty_generate(response)
 
-puts "what hair product do you want to update?"
-product_id = gets.chomp
+# puts "what hair product do you want to update?"
+# product_id = gets.chomp
 
-params = {
-  title: "Cake!!!"
-}
+# params = {
+#   title: "Cake!!!"
+# }
 
-response = Unirest.patch("", parameters: params).body
+# response = Unirest.patch("", parameters: params).body
 
-puts JSON.pretty_generate(response)
+# puts JSON.pretty_generate(response)
 
 # json.array! @recipes.each do |recipe|
 #   json.id recipe.id
@@ -32,9 +32,25 @@ puts JSON.pretty_generate(response)
 #   json.prep_time recipe.prep_time
 # end
 
-puts "What product id would you like to remove?"
+# 
+  # response = Unirest.post(
+  #   "http://localhost:3000/users",
+  #   parameters: {
+  #     name: "Paul",
+  #     email: "paul@email.com",
+  #     password: "tonja",
+  #     password_confirmation: "tonja"
+  #   }
+  # )
+  # p response.body
 
-product_id = gets.chomp
-
-response = Unirest.deleted ("url").body
-puts JSON.pretty pretty_generate(response)
+   response = Unirest.post(
+    "http://localhost:3000/users",
+    parameters: {
+      name: "Poppy",
+      email: "poppy@email.com",
+      password: "tonja",
+      password_confirmation: "tonja"
+    }
+  )
+  p response.body
